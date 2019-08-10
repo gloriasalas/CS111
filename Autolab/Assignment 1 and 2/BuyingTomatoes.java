@@ -1,22 +1,21 @@
 public class BuyingTomatoes{
-	public static void main (String [] args){
-
-		double numPounds;
-		double cost;
-		double totalCost;
-	
-		System.out.println("Enter number of pounds");
-		numPounds = IO.readDouble();
-		System.out.println("Enter cost of pound");
-		cost = IO.readDouble();
-	
-		if (numPounds < 0 || cost < 0){
-		IO.outputStringAnswer("Error");
-		}else {
-			totalCost = numPounds * cost;
-			IO.outputDoubleAnswer(totalCost);
-		}
-		
-	}
+  public static void main (String[] args){
+      System.out.println("Enter cost per pound: ");
+      double costPound = IO.readDouble();
+      System.out.println("Enter number of pounds: ");
+      double numPounds = IO.readDouble();
+      boolean badInput = false;
+      if(costPound < 0){
+        IO.reportBadInput();
+        badInput = true;
+      }
+      if(numPounds < 0){
+        IO.reportBadInput();
+        badInput = true;
+      }
+      if(badInput == false){
+        IO.outputDoubleAnswer(costPound * numPounds);
+      }
+  }
 }
 
