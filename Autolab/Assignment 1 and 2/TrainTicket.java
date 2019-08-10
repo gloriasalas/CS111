@@ -1,9 +1,9 @@
 public class TrainTicket{
 	public static void main (String [] args){
 		
-		double price;
-		boolean senior;
-		boolean boughtOnTrain;
+		double price = IO.readDouble();
+		boolean senior = IO.readBoolean();
+		boolean boughtOnTrain = IO.readBoolean();
 
 		System.out.println("Are you a senior?");
 		senior = IO.readBoolean();
